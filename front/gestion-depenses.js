@@ -46,7 +46,7 @@ function genererFormsTaches(data){
         return `
         <div class="row">
             <form class="d-flex my-3 fdepense">
-            <input type="text" name="id" placeholder="id" class="form-input col-md-3" style="flex-grow:1" value="${d.id}">
+            <input id="id" type="text" name="id" placeholder="id" class="form-input col-md-3" style="flex-grow:1" value="${d.id}">
             <input type="text" name="name" placeholder="nom" class="form-input col-md-3" style="flex-grow:1" value="${d.name}">
             <input type="number" name="montant" placeholder="montant" class="form-input col-md-3" style="flex-grow:1" value="${d.montant}">
             <input type="submit" class="btn btn-warning mx-3" value="modifier">
