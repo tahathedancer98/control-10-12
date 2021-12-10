@@ -1,14 +1,9 @@
 {
   "depenses": [
     {
-      "name": "Vélo",
-      "montant": "200",
-      "id": 1
-    },
-    {
-      "name": "salaire",
-      "montant": "-230",
-      "id": 2
+      "id": 1,
+      "name": "Salaire",
+      "montant": "-20003"
     }
   ]
 }

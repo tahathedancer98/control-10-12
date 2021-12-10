@@ -16,11 +16,12 @@ window.addEventListener("DOMContentLoaded"  , async() => {
             if(action == "modifier"){
                 const data = {
                     id : id,
-                    name : form.name.value,
-                    montant : form.name.value
+                    name : form.name.value ,
+                    montant : parseFloat(form.montant.value)
                 }
                 const options = { method : "PUT" , body : JSON.stringify(data) , headers : {'Content-Type': 'application/json'} }
-                await fetch("http://localhost:3000/depenses/"+id , options)
+                await fetch("http://localhost:3000/depenses/"+id , options);
+                window.location.reload;
             }else if(action == "supprimer"){
                 const options = {method : "DELETE"}
                 await fetch("http://localhost:3000/depenses/"+id , options);
@@ -81,7 +82,7 @@ function gererCalcul(depenses){
             entrant += parseFloat(depenses[i].montant);
     }
     console.log(total);
-    document.querySelector(".js-compteur-total").innerHTML = ""+total.toString(); 
-    document.querySelector(".js-compteur-sortant").innerHTML = ""+sortant.toString(); 
-    document.querySelector(".js-compteur-entrant").innerHTML = ""+entrant.toString(); 
+    document.querySelector(".js-compteur-total").innerHTML = ""+total; 
+    document.querySelector(".js-compteur-sortant").innerHTML = ""+sortant; 
+    document.querySelector(".js-compteur-entrant").innerHTML = ""+entrant;
 }

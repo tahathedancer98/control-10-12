@@ -3,7 +3,7 @@ document.querySelector(".js-form-add").addEventListener("submit" , async (e) => 
 
     const data = {
         name : e.target.name.value ,
-        montant : e.target.montant.value 
+        montant : parseFloat(e.target.montant.value) 
     }
 
     // vérification avec joi 
